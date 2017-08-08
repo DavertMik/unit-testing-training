@@ -1,0 +1,10 @@
+{
+    "name": "davert/unit-demo",
+    "authors": [
+        {
+            "name": "Davert",
+            "email": "davert.php@resend.cc"
+        }
+    ],
+    "require": {}
+}
