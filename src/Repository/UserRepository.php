@@ -18,7 +18,7 @@ class UserRepository
         if (!file_exists(self::FILE)) {
             throw new \Exception('This is no such user');
         }
-        $this->users = json_decode(file_get_contents(self::FILE));
+        $this->users = json_decode(file_get_contents(self::FILE), true);
         if (!$this->users) $this->users = [];
     }
 
