@@ -19,7 +19,7 @@ class Address
     public function validate()
     {
         foreach ($this->requiredFields as $field) {
-            $value = $this->user->{'get' . ucfirst($field)};
+            $value = $this->user->{'get' . ucfirst($field)}();
             if (!$value) $this->addError($field, "Should not be empty");
         }
     }
