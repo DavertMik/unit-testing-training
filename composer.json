@@ -6,5 +6,8 @@
             "email": "davert.php@resend.cc"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "classmap": ["src"]
+    }
 }
