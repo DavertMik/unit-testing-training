@@ -20,7 +20,9 @@ class UserAccount
     {
         $validator = new AccountValidator($this->user);
         $validator->validate();
-        if ($validator->hasErrors()) return false;
+        if ($validator->hasErrors()) {
+            return false;
+        }
         $repository = new UserRepository();
         if ($repository->findUserByEmail($this->user->getEmail())) {
             throw new \Exception("User is already registered");

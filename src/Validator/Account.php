@@ -21,6 +21,9 @@ class Account implements ValidatorInterface
             $value = $this->user->{'get' . ucfirst($field)};
             if (!$value) $this->addError($field, "Should not be empty");
         }
+        if (!strpos($this->user->getEmail(), '@')) {
+            $this->addError('email', "Please provide a valid email");
+        }
     }
 
     protected function addError($field, $description)
