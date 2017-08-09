@@ -1,9 +1,7 @@
 <?php
-
-namespace Form;
+namespace Service;
 
 use Repository\UserRepository;
-use Service\Email\RealEmail;
 use Validator\Account as AccountValidator;
 use Validator\Address as AddressValidator;
 
